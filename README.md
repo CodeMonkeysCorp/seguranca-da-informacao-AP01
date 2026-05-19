@@ -8,6 +8,22 @@ O sistema simula um pequeno painel acadêmico usado para registrar, consultar e 
 
 ---
 
+## Versão entregue
+
+Esta versão entregue mantém o protótipo em **HTML, CSS e JavaScript puro**, mas aplica melhorias de segurança no front-end para reduzir exposição indevida de dados e restringir ações por perfil.
+
+As principais mudanças implementadas foram:
+
+- controle de acesso por perfil (`Aluno`, `Professor` e `Administrador`) com permissões diferentes para consulta, alteração, exclusão, exportação e restauração da base;
+- validação mais rígida dos campos do formulário, com foco em integridade dos dados e uso apenas de informações fictícias;
+- minimização e mascaramento de dados sensíveis, como CPF, e-mail e telefone, conforme o perfil autenticado;
+- restrição de visualização e uso de observações internas, logs e ações administrativas;
+- exportação com dados tratados e renderização da tabela e dos logs com APIs seguras do DOM, evitando uso direto de `innerHTML`.
+
+Mesmo com esses reforços, a aplicação continua sem back-end real, banco de dados centralizado ou autenticação no servidor. Por isso, a entrega melhora o protótipo dentro do escopo da disciplina, mas não elimina limitações estruturais de uma aplicação executada apenas no navegador.
+
+---
+
 ## 1. Objetivo do projeto
 
 Este sistema foi criado para apoiar uma atividade prática de análise e melhoria de segurança em aplicações web.
